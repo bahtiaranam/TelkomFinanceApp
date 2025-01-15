@@ -1,10 +1,10 @@
 // features/user/userSlice.js
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import {API_BASE_URL} from 'dotenv';
 import axios from 'axios';
+import {API_BASE_URL} from '@env';
 
 export const convertCurrency = createAsyncThunk(
-  'auth/convertCurrency',
+  'home/convertCurrency',
   async () => {
     try {
       const response = await axios.get(`${API_BASE_URL}latest/IDR`);

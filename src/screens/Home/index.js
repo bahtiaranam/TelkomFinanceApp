@@ -38,7 +38,7 @@ const Home = () => {
       addTransaction({
         id: listTransaction.length + 1,
         ...form,
-        date: new Date(),
+        date: new Date().toISOString(),
       }),
     );
     setIsEdit(false);
@@ -50,7 +50,7 @@ const Home = () => {
       editTransaction({
         id: selectedItem.id,
         ...transaction,
-        date: new Date(),
+        date: new Date().toISOString(),
       }),
     );
     setVisibleTransaction(false);
