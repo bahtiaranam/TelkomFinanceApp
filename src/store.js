@@ -1,6 +1,8 @@
-// reducers/index.js
-import {configureStore} from '@reduxjs/toolkit';
+import {combineReducers} from 'redux';
+import homeReducer from './screens/Home/reducer';
 
-export default configureStore({
-  reducer: {},
+const rootReducer = combineReducers({
+  home: homeReducer,
 });
+
+export default rootReducer;
